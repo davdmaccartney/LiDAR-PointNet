@@ -261,7 +261,7 @@ def get_a_model():
                    'merged': merged,
                    'step': batch}
 
-        return sess, ops, train_writer, test_writer, train_writer, test_writer, saver  
+        return sess, ops, train_writer, test_writer, saver  
 
 
 
@@ -501,7 +501,7 @@ if __name__ == "__main__":
 
   i = 0
   total_con=len(fnmatch.filter(os.listdir(Chemin), '*.laz'))
-  sess, ops, train_hashes, validation_hashes, train_writer, test_writer, saver = get_a_model()
+  sess, ops, train_writer, test_writer, saver = get_a_model()
   cls()
   # Boucle sur les Laz
   for filename in os.listdir(Chemin):
